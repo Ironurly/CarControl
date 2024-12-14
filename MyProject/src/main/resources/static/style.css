@@ -1,0 +1,128 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+#mainContainer {
+    display: flex;
+    height: 100%;
+}
+
+/* ����� ������ */
+#sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+    #sidebar input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        transform: scale(1.5);
+        margin-right: 10px;
+    }
+    #sidebar h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    #sidebar .form-group {
+        margin-bottom: 10px;
+    }
+
+    #sidebar label {
+        vertical-align: middle;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    #sidebar input {
+        width: 80%;
+        padding: 8px;
+        font-size: 14px;
+        border: none;
+        border-radius: 10px;
+    }
+
+#instructions {
+    width: 300px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+    #instructions h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    #instructions p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    #instructions ul {
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+
+        #instructions ul li {
+            margin-bottom: 8px;
+        }
+
+/* �������� ������� */
+#content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+/* ������� ������ ���������� */
+#topControls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+    #topControls button {
+        background-color: #3498db;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        #topControls button:hover {
+            background-color: #2980b9;
+        }
+
+
+#gameCanvas {
+    background-color: #fff;
+    border: 2px solid #34495e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#coordinatesDisplay {
+    font-size: 14px;
+    margin: 10px 0;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mainContainer">
+        <!-- Левая панель с параметрами -->
+        <div id="sidebar">
+            <h2>Настройки</h2>
+            <div class="form-group">
+                <label for="kInput">Коэффициент приближения к стенам (k):</label>
+                <input type="number" id="kInput" value="100" step="1" />
+            </div>
+            <div class="form-group">
+                <label for="numOfGen">Количество особей в поколении:</label>
+                <input type="number" id="numOfGen" value="500" step="10" />
+            </div>
+            <div class="form-group">
+                <label for="tempInput">Температурная карта:</label>
+                <input type="checkbox" id="tempInput" />
+            </div>
+        </div>
+
+        <!-- Основная область с канвасом и кнопками -->
+        <div id="content">
+            <div id="topControls">
+                <button id="showBestCar">Показать лучшую машину</button>
+                <button id="startButton">Запуск обучения</button>
+            </div>
+            <div id="coordinatesDisplay">X: 0, Y: 0</div>
+            <div id="generationDisplay">
+                <h3>Количество поколений: <span id="generationCount">0</span></h3>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <!-- Правая панель с инструкциями -->
+        <div id="instructions">
+            <h2>Инструкции</h2>
+            <p>
+                Добро пожаловать в симуляцию! Инструкция.
+            </p>
+            <ul>
+                <li>Рисовать стены - зажать и перемещать ЛКМ.</li>
+                <li>Задать точку старта - ПКМ.</li>
+                <li>Задать точку финиша - СКМ.</li>
+                <li>Нажмите "Показать лучшую машину", чтобы наблюдать за лучшей особью.</li>
+                <li>Нажмите "Запуск обучения", чтобы начать эволюционную симуляцию.</li>
+            </ul>
+            <p>
+                После завершения обучения вы сможете видеть полученный путь до финиша.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cursor-coordinates.js"></script>
+</body>
+</html>
